@@ -29,10 +29,12 @@ class Manejador:
             print("".center(20,"-"))
     
     def Buscar(self,NroViaj):
+        i = 0
 
-        for i, viaj in enumerate( self.__ListaViajeros):
-            if(viaj.GetNumViaj()==NroViaj):
-                ViajeroEncontrado= viaj
+        while(self.__ListaViajeros[i].GetNumViaj() != NroViaj):
+            i += 1
+        ViajeroEncontrado= self.__ListaViajeros[i]
+        print("VIAJERO ENCONTRADO")
         print(ViajeroEncontrado)
         return ViajeroEncontrado
         
