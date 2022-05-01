@@ -18,11 +18,10 @@ if __name__== "__main__":
         print("[1] Para consultar cantidad de millas")
         print("[2] Para acumular millas")
         print("[3] Para canjear millas")
-        print("[4] Mostrar viajero con mas millas acumuladas")
+        print("[4] Mostrar viajero con mas millas acumuladas SOBRECARGA DE OPERADORES")
         print("[5] Acumular millas usando SOBRECARGA DE OPERADORES")
         print("[6] Canjear millas usando SOBRECARGA DE OPERADORES")
-        print("[7] Viajero con mas millas acumuladas SOBRECARGA DE OPERADORES")
-        print("[8] Listar Viajeros")
+        print("[7] Listar Viajeros")
         print("[0] Para SALIR del menu")
 
         op = int( input("INGRESE OPCION POR TECLADO\n"))
@@ -38,7 +37,12 @@ if __name__== "__main__":
             Canj = int(input("Ingrese millas que desea canjear\n"))
             Viajero.canjearMillas(Canj)
         elif(op == 4):
-            Lista.MaximoMillas()
+            v = Lista.MillasMaximas()
+            print("El viajero con mas millas es:")
+            print("".center(20,"-"))
+            print(v)
+            print("".center(20,"-"))
+            input("ENTER PARA CONTINUAR")
         elif(op == 5):
             Acum = int(input("Ingrese cantidad de millas que desea acumular\n"))
             Viajero = Viajero + Acum
@@ -60,7 +64,6 @@ if __name__== "__main__":
             print(v)
             print("".center(20,"-"))
             input("ENTER PARA CONTINUAR")
-        elif(op == 8):
             Lista.Listar()
         elif(op == 0):
             continuar = not continuar

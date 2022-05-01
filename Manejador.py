@@ -39,9 +39,9 @@ class Manejador:
         return ViajeroEncontrado
         
     def MillasMaximas(self):
-        print("Primero ordenamos la lista de modo que el viajero con mas millas quede en la componente 0")
-        self.__ListaViajeros.sort(reverse=True)
-        print("Retornamos la componente")
-        v = self.__ListaViajeros[0]
-        return v
+        viajeroMaximo = self.__ListaViajeros[0]
+        for viajero in self.__ListaViajeros:
+            if viajeroMaximo < viajero:
+                viajeroMaximo = viajero
+        return viajeroMaximo
         
